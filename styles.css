@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background: linear-gradient(135deg, #2c3e50, #1a2a3a); /* Dark blue gradient */
-    color: white; /* White text for contrast */
+    background: linear-gradient(135deg, #2c3e50, #1a2a3a);
+    color: white;
 }
 
 /* Background Logo */
@@ -28,7 +28,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(44, 62, 80, 0.9); /* Semi-transparent dark blue */
+    background: rgba(44, 62, 80, 0.9);
     padding: 1rem;
     z-index: 1000;
     display: flex;
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffcc00; /* Yellow on hover */
+    color: #ffcc00;
     transition: color 0.3s ease;
 }
 
@@ -60,16 +60,16 @@ nav a:hover {
 .section {
     padding: 5rem 2rem;
     min-height: 100vh;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.9);
     margin: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #333; /* Dark text for readability */
+    color: #333;
 }
 
 .section h2 {
-    color: #2c3e50; /* Dark blue */
-    border-bottom: 2px solid #ffcc00; /* Yellow underline */
+    color: #2c3e50;
+    border-bottom: 2px solid #ffcc00;
     padding-bottom: 10px;
 }
 
@@ -82,6 +82,113 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
+/* Round Image with Hover Effect */
+.profile-image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 5px solid #2c3e50;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.1);
+    border-color: #ffcc00;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slide Button */
+.slide-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.slide-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffcc00;
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+.slide-button:hover::before {
+    left: 0;
+}
+
+.slide-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.slide-button:hover {
+    color: #2c3e50;
+}
+
+/* Box Animation for Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #333;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #1a2a3a;
+}
+
 /* Chatbot Styling */
 .chatbot {
     position: fixed;
@@ -92,7 +199,7 @@ nav a:hover {
 
 .chat-icon {
     font-size: 2rem;
-    background: #2c3e50; /* Dark blue */
+    background: #2c3e50;
     color: white;
     padding: 10px;
     border-radius: 50%;
@@ -104,7 +211,7 @@ nav a:hover {
     position: absolute;
     bottom: 60px;
     right: 0;
-    background: #ffcc00; /* Yellow background */
+    background: #ffcc00;
     border: 1px solid #ccc;
     padding: 1rem;
     height: 300px;
@@ -120,7 +227,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    background: #2c3e50; /* Dark blue header */
+    background: #2c3e50;
     color: white;
     padding: 10px;
     border-radius: 10px 10px 0 0;
@@ -149,11 +256,11 @@ nav a:hover {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: white; /* White input background for contrast */
+    background: white;
 }
 
 #voiceButton {
-    background: #2c3e50; /* Dark blue */
+    background: #2c3e50;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -162,7 +269,7 @@ nav a:hover {
 }
 
 #voiceButton:hover {
-    background: #1a2a3a; /* Darker blue on hover */
+    background: #1a2a3a;
 }
 
 /* Message Styling */
@@ -175,14 +282,14 @@ nav a:hover {
 }
 
 .user-message {
-    background: #2c3e50; /* Dark blue */
+    background: #2c3e50;
     color: white;
     margin-left: auto;
     border-bottom-right-radius: 0;
 }
 
 .bot-message {
-    background: white; /* White background for bot messages */
+    background: white;
     color: black;
     margin-right: auto;
     border-bottom-left-radius: 0;
