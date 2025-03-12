@@ -1,0 +1,213 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #2c3e50, #1a2a3a); /* Dark blue gradient */
+    color: white; /* White text for contrast */
+}
+
+/* Background Logo */
+.background-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.bowiestate.edu/_files/images/logos/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.9); /* Semi-transparent dark blue */
+    padding: 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Yellow on hover */
+    transition: color 0.3s ease;
+}
+
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark text for readability */
+}
+
+.section h2 {
+    color: #2c3e50; /* Dark blue */
+    border-bottom: 2px solid #ffcc00; /* Yellow underline */
+    padding-bottom: 10px;
+}
+
+.section ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+/* Chatbot Styling */
+.chatbot {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.chat-icon {
+    font-size: 2rem;
+    background: #2c3e50; /* Dark blue */
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-window {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background: #ffcc00; /* Yellow background */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    height: 300px;
+    width: 250px;
+    overflow-y: scroll;
+    z-index: 1001;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: #2c3e50; /* Dark blue header */
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-messages {
+    margin-bottom: 10px;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#chatInput {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white; /* White input background for contrast */
+}
+
+#voiceButton {
+    background: #2c3e50; /* Dark blue */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#voiceButton:hover {
+    background: #1a2a3a; /* Darker blue on hover */
+}
+
+/* Message Styling */
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: #2c3e50; /* Dark blue */
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.bot-message {
+    background: white; /* White background for bot messages */
+    color: black;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+}
+
+.typing-indicator {
+    display: none;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chat-window {
+        width: 100%;
+        max-width: 400px;
+    }
+}
